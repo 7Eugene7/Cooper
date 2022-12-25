@@ -1,0 +1,116 @@
+.header {
+position: fixed;
+width: 100%;
+top:0;
+left: 0;
+z-index: 50;
+&:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+
+}
+&__body {
+    display: grid;
+    grid-template:1fr/1fr minmax(auto,200px)minmax(auto,1000px) minmax(auto,200px)1fr;
+    position: relative;
+}
+    &__logo {
+        grid-column: 2/3;
+        display: flex;
+        align-items: end;
+        position: relative;
+        z-index: 3;
+        
+        img {
+
+        }
+    }
+
+    &__burger {
+        display: none;
+    }
+
+    &__menu {
+        grid-column: 3/4;
+        display: flex;
+    }
+
+    &__list {
+        display: flex;
+        align-items: end;
+        column-gap: 50px;
+        position: relative;
+        z-index: 2;
+    }
+
+    &__link {
+        font-family: 'Mont-SemiBold';
+        display: flex;
+        font-size: 16px;
+        line-height: 96.4%;
+        text-align: center;
+        transition: all 1s ease 0s;
+        color:#fff;
+        &:hover {
+           color: orange;
+           text-decoration: underline;
+        }
+    }
+
+    &__icons {
+        grid-column: 4/5;
+        display: flex;
+        justify-content: end;
+        align-items: flex-start;
+        column-gap: 20px;
+        position: relative;
+        z-index: 3;
+
+    }
+}
+.icons {
+
+    &__heart {
+        background-color: #fff;
+        flex:0 1 50px;
+        justify-content: center;
+        display: flex;
+        padding-top: 25px;
+        
+    }
+
+    &__link {
+    }
+
+    &__user {
+        background-color: #fff;
+        flex:0 1 50px;
+        justify-content: center;
+        display: flex;
+        padding-top: 25px;
+    }
+
+    &__shopping {
+        background-color: #fff;
+        flex:0 1 50px;
+        justify-content: center;
+        display: flex;
+        padding-top: 27px;
+    }
+}
+.header__menu.active {
+    top:0;
+}
+ 
+body.active .icons__heart {
+    display: flex;
+    justify-content: center;
+} 
+body.active .icons {
+    justify-content: center;
+} 

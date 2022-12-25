@@ -1,0 +1,22 @@
+.wrapper {
+    display: grid;
+    grid-template:minmax(100px,auto)1fr minmax(200px,auto)/1fr;
+    min-height: 100vh;
+    grid-template-areas: 'header'
+                        'main'
+                        'footer';
+}
+.header {
+display: grid;
+grid-area: header;
+
+}
+.main {
+    display: grid;
+    grid-area: main;
+    margin-top: -100px;
+    }
+    .footer {
+        display: grid;
+        grid-area: footer;
+        }
